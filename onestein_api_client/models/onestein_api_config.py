@@ -43,7 +43,9 @@ class OnesteinAPIConfig(models.Model):
         headers = {
             "API-KEY": self.api_key
         }
-        headers.update(kwargs.get("headers", {}))
+        if "headers" in kwargs:
+            headers.update(kwargs.get("headers", {}))
+            kwargs.pop("headers")
         full_url = "%s%s%s" % (self._base_url(), "" if url.startswith("/") else "/", url)
 
         response = requests.request(
