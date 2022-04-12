@@ -12,8 +12,10 @@ class AccountMove(models.Model):
 
     @api.model
     def get_onestein_api_credit_balance(self):
-        if not self.env.user.has_group("account.group_account_user"):
-            raise AccessError()
+        if not self.env.user.has_group("account.group_account_invoice"):
+            raise AccessError(
+                _("You need to be in the 'Billing' group.")
+            )
 
         try:
             return self.env["onestein.api.config"].sudo().get().credit_balance("ocr")
