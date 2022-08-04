@@ -1,4 +1,4 @@
-odoo.define("onestein_api_client", function(require) {
+odoo.define("onestein_api_client", function (require) {
     "use strict";
 
     var widgetRegistry = require("web.widget_registry");

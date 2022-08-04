@@ -1,7 +1,7 @@
 {
     "name": "Vendor Bill OCR",
     "category": "Accounting",
-    "version": "14.0.1.0.0",
+    "version": "15.0.1.0.0",
     "author": "Onestein",
     "license": "LGPL-3",
     "depends": [
