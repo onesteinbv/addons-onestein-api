@@ -9,11 +9,11 @@
                 <button name="button_onestein_api_ocr_upload"
                         type="object"
                         string="Scan with Onestein API"
-                        attrs="{'invisible':['|', ('state', '!=', 'draft'), ('move_type', 'not in', ('in_invoice', 'in_refund'))]}"
+                        attrs="{'invisible':['|', ('state', '!=', 'draft'), ('type', 'not in', ('in_invoice', 'in_refund'))]}"
                         groups="account.group_account_invoice"
                 />
                 <widget
-                    attrs="{'invisible':['|', ('state', '!=', 'draft'), ('move_type', 'not in', ('in_invoice', 'in_refund'))]}"
+                    attrs="{'invisible':['|', ('state', '!=', 'draft'), ('type', 'not in', ('in_invoice', 'in_refund'))]}"
                     name="onestein_api_credit_balance" method="get_onestein_api_credit_balance"
                     groups="account.group_account_invoice"
                 />

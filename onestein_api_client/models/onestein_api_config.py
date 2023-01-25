@@ -8,6 +8,7 @@ from requests.exceptions import HTTPError
 
 class OnesteinAPIConfig(models.Model):
     _name = 'onestein.api.config'
+    _description = 'Onestein API Config'
 
     name = fields.Char(
         required=True

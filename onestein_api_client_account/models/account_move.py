@@ -123,7 +123,7 @@ class AccountMove(models.Model):
                     )
                 with invoice_form.invoice_line_ids.new() as invoice_line_form:
                     invoice_line_form.account_id = (
-                        self.journal_id.default_account_id
+                        self.journal_id.default_debit_account_id
                     )
                     invoice_line_form.product_id = product
                     invoice_line_form.name = dict_line.get("title") or dict_line.get(
